@@ -1,5 +1,5 @@
-const deleteUser = require('./teste3');
-const data = require('./fakeData');
+const deleteUser = require('../teste3');
+const data = require('../fakeData');
 
 describe('deleteUser', () => {
     beforeEach(() => {

@@ -1,5 +1,5 @@
-const { getUser, getUsers } = require('./teste1');
-const data = require('./fakeData');
+const { getUser, getUsers } = require('../teste1');
+const data = require('../fakeData');
 
 describe('getUser', () => {
     it('deve retornar o usuário com o nome fornecido', () => {

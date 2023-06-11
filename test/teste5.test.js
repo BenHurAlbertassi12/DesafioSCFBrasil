@@ -1,7 +1,7 @@
-const getUserCount = require("./teste5");
+const getUserCount = require("../teste5");
 
 // Mock para fakeData
-jest.mock("./fakeData", () => [
+jest.mock("../fakeData", () => [
     { name: "John" },
     { name: "John" },
     { name: "Bob" },

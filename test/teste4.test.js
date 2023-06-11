@@ -1,4 +1,4 @@
-const updateUser = require('./teste4'); 
+const updateUser = require('../teste4'); 
 test('Atualiza os dados de um usuário específico', () => {
     const req = {
         query: { id: '1' },

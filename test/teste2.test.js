@@ -1,5 +1,5 @@
-const addUser = require('./teste2');
-const data = require('./fakeData');
+const addUser = require('../teste2');
+const data = require('../fakeData');
 
 describe('addUser', () => {
     beforeEach(() => {
