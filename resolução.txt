@@ -1,0 +1,85 @@
+Todos os arquivos estão com testes
+para rodalos no terminal instale as dependencias necessárias
+
+npm install
+
+por ser apenas os arquivos jest o repositório é bem pequeno em torno de 35mb
+
+rode os testes no terminal de forma independente
+npx jest teste1.test.js
+npx jest teste2.test.js
+npx jest teste3.test.js
+npx jest teste4.test.js
+npx jest teste5.test.js
+
+Teste 1
+
+Inicialmente foi alterada a linha 7
+    if (i.name == name)
+para
+    if (data[i].name === name)
+
+    data.[i] -> Essa correção vai garantir que esteja comparando corretamente 
+    o nome do usuário em cada iteração do loop for.
+
+    === -> uma comparação de forma estrita, para evitar erros de comparação
+
+Tambem foi adicionado um erro 404 com a resposta de uma mensagem para caso não
+encontre nenhum usuário
+
+-----------------
+
+Teste 2
+
+O erro era na variavel 'job' que estava escrito 'jov'
+basicamente é uma função que cria um novo usuário
+
+a fim de aumentar um pouco a complexidade e deixar o código mais "certeiro"
+caso o usuário tente criar um cadastro com dados ja existentes ele retorna uma mensagem de erro
+
+-----------------
+
+Teste 3
+
+O mesmo feito no requisito 1
+
+-----------------
+
+Teste 4
+
+    const reg = data.find(d => id == id);
+
+    a logica desta linha esta mal implementada gerando erro na execução
+
+    const user = data.find((d) => d.id === parseInt(id));
+
+    com esta atualização ele fica mais conciso
+    tambem adicionei um if, else para a logica
+
+-----------------
+
+Teste 5
+
+No código foram feitas algumas modificações. Foi adicionado um novo trecho de código que importa um
+arquivo chamado "fakeData". Em seguida, a função faz uso desse arquivo para contar quantas vezes o valor de
+"name" aparece nele.
+
+Foi criada uma variável chamada "count" e inicializada com o valor 0. 
+Em um loop, a função percorre cada elemento do array "data" (que foi importado do arquivo "fakeData"). 
+Se o valor da propriedade "name" do elemento for igual ao valor de "name" 
+recebido na requisição, incrementa-se o valor de "count".
+
+Por fim, a função envia uma resposta contendo a mensagem "Usuário [name] foi lido [count] vezes no teste1.", onde [name] é o valor recebido na requisição e [count] é o número de vezes que o valor de "name" apareceu no arquivo "fakeData".
+
+-----------------
+
+Teste 6
+
+
+-----------------
+
+
+
+Outro detalhe foi alterar as variaveis "var" para "const"
+para manter a linguagem mais "moderna", e tambem torna o código mais seguro e legivel
+seguro para não ser alterada por acidente e legivel pois determina que não pode ser alterada
