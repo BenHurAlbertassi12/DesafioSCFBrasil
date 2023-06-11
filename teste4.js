@@ -1,7 +1,7 @@
-var data = require("./fakeData");
+const data = require("./fakeData");
 
 module.exports = function (req, res) {
-    var id = req.query.id;
+    const id = req.query.id;
 
     const user = data.find((d) => d.id === parseInt(id));
 
