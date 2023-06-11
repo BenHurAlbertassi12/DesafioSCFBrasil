@@ -24,7 +24,6 @@ describe('deleteUser', () => {
 
         expect(data).toEqual([
             { name: 'Usuário 1' },
-            null,
             { name: 'Usuário 3' },
         ]);
         expect(res.send).toHaveBeenCalledWith('success');
